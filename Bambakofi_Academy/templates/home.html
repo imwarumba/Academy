@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bambakofi_Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      color: white;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BAMBAKOFI ACADEMY</h1>
+  <h2>Education is the seed of knowledge</h2>
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about_us' %}">About Us</a></li>
+      <li><a href="{% url 'who_we_are' %}">Who We Are</a></li>
+      <li><a href="{% url 'teaching_learning' %}">Teaching &amp; Learning</a></li>
+      <li><a href="{% url 'staff' %}">Staff</a></li>
+      <li><a href="{% url 'news_events' %}">News &amp; Events</a></li>
+      <li><a href="{% url 'admissions' %}">Admissions</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Home Page</h2>
+  <p>This is the homepage of our website. Explore our content using the menu above.</p>
+</main>
+
+<footer>
+  &copy; 2025 Our Website. All rights reserved.
+</footer>
+
+</body>
+</html>

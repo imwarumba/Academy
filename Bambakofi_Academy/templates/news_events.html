@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery-item {
+      margin: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .gallery-item img {
+      max-width: 300px;
+      height: auto;
+      display: block;
+    }
+    .pdf-list {
+      margin-top: 30px;
+    }
+    .pdf-item {
+      margin: 10px 0;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>News & Events</h1>
+</header>
+
+<main>
+  <!-- Gallery Section for Images -->
+  <section>
+    <h2>Student and School Activities</h2>
+    <div class="gallery">
+      {% for image in event_images %}
+      <div class="gallery-item">
+        <img src="{{ image.url }}" alt="{{ image.alt|default:'Event Image' }}">
+        {% if image.caption %}
+        <p>{{ image.caption }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- PDF Files Section -->
+  <section class="pdf-list">
+    <h2>School Magazines and Brochures</h2>
+    <ul>
+      {% for pdf in pdf_files %}
+      <li class="pdf-item">
+        <a href="{{ pdf.url }}" target="_blank">{{ pdf.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Our School. All rights reserved.
+</footer>
+
+</body>
+</html>

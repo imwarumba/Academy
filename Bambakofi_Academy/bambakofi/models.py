@@ -1,21 +1,22 @@
 #!/ismailmwarumba/bin/env python
 from django.db import models
 
-class Category(models.Model):
-    name=models.CharField(max_length=128, unique=True)
+class AboutUs(models.Model):
+    motto = models.CharField(max_length=255)
+    mission = models.TextField()
+    vision = models.TextField()
 
-    class Meta:
-        verbose_name_plural = 'Categories'
+class Staff(models.Model):
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    bio = models.TextField()
 
-    def __str__(self):
-        return self.name
-    
-class Page(models.Model):
-    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    title = models.CharField(max_length=128)
-    url = models.URLField()
-    views = models.IntegerField(default=0)
-    
-    def __str__(self):
-        return self.title
-    
+class NewsEvent(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    date = models.DateField()
+
+class Admission(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    message = models.TextField()
