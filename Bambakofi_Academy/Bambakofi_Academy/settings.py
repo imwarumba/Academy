@@ -76,6 +76,8 @@ STATICFILES_DIRS=[STATIC_DIR, ]
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+LOGIN_URL = '/custom-login/'
+
 
 WSGI_APPLICATION = 'Bambakofi_Academy.wsgi.application'
 

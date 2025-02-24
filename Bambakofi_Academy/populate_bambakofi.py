@@ -1,3 +1,4 @@
+#!/ismailmwarumba/bin/env python
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Bambakofi_Academy.settings')
 
